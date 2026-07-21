@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SQL Server to MySQL Converter
 
 A simple Flask web app that converts common T-SQL syntax into MySQL-compatible SQL.
@@ -42,3 +43,6 @@ A simple Flask web app that converts common T-SQL syntax into MySQL-compatible S
 ## Notes
 
 This tool focuses on common SQL Server-to-MySQL conversions. Some features such as CLR functions, APPLY, PIVOT, and SQL Server system views may need manual review.
+=======
+# MSSQLtoMySQL_Migration
+>>>>>>> 3da40eecfd7edd6d444a8898a5e08bb5c3f0a583
