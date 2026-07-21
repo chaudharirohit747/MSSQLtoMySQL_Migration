@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SQL Server to MySQL Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>SQL Server to MySQL Converter</h1>
+      <p class="intro">
+        Paste a T-SQL query, convert it to MySQL syntax, and review any SQL Server-specific features that may need manual adjustments.
+      </p>
+
+      <section class="panel">
+        <label for="input-query">T-SQL Query</label>
+        <textarea id="input-query" placeholder="SELECT TOP 10 [CustomerID] FROM [dbo].[Customers] WHERE [Active] = 1;"></textarea>
+
+        <div class="actions">
+          <button id="convert-btn">Convert</button>
+          <label class="upload-btn">
+            Upload .sql file
+            <input type="file" id="sql-file" accept=".sql,text/plain" />
+          </label>
+        </div>
+      </section>
+
+      <section class="panel">
+        <label for="output-query">MySQL Query</label>
+        <textarea id="output-query" readonly placeholder="Converted MySQL query will appear here."></textarea>
+
+        <div class="actions secondary-actions">
+          <button id="copy-btn">Copy to Clipboard</button>
+        </div>
+      </section>
+
+      <section id="warnings" class="warnings"></section>
+
+      <section class="panel history-panel">
+        <h2>Recent Queries</h2>
+        <ul id="history-list"></ul>
+      </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>
